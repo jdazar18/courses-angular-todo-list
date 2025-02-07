@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './todo-list.component.css'
 })
 export class TodoListComponent {
+
+  @HostBinding('attr.class') cssClass = 'container';
 
   todos : string[];
 
