@@ -1,1 +1,27 @@
-<p>todo-list works!</p>
+
+<div class="container content">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+              Agregar nueva tarea
+            </div>
+            <div class="card-body">
+
+              <form>
+                <div class="form-group">
+                  <label for="todo">Tarea</label>
+                  <input type="text" class="form-control" id="todo" #todo>
+                </div>
+                <button type="submit" (click)="addTodo(todo.value)">Agregar Tarea</button>
+              </form>
+            </div>
+          </div>
+    </div>
+
+    <div class="row">
+      <ul>
+        <li *ngFor="let todo of todos">{{todo}}</li>
+      </ul>
+    </div>
+
+</div>
